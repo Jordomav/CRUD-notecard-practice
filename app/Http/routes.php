@@ -13,7 +13,8 @@
 
 Route::get('/', 'CardsController@index');
 Route::get('show/{card}', 'CardsController@show');
-Route::get('notes', 'CardsController@notes');
+Route::post('cards/{card}/notes', 'NotesController@store');
+Route::post('delete/{id}', 'NotesController@delete');
 
 /*
 |--------------------------------------------------------------------------
