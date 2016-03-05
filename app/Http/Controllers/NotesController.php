@@ -16,8 +16,16 @@ class NotesController extends Controller
         $card->notes()->save($note);
         return back();
     }
-    public function delete(){
-        $remove = DB::table('notes')->delete();
+    public function edit(Note $note){
+        return view('notes.edit', compact('note'));
+    }
+    public function update(Request $request, Note $note){
+        $note->update($request->all());
+//        return view('cards.show');
+        return back();
+    }
+    public function delete(Note $note){
+        $note->delete();
         return back();
     }
 }

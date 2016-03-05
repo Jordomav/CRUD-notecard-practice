@@ -14,8 +14,7 @@
             </h3>
                 <ul class="list-group">
                     @foreach($card->notes as $note)
-                        <li class="list-group-item">{{$note->body}}</li>
-                        <a href="delete/{id}">Delete Note</a>
+                        <li class="list-group-item">{{$note->body}}<a href="/notes/{{$note->id}}/edit"> Edit </a><a href="/delete/{{$note->id}}"> Delete</a></li>
                     @endforeach
                 </ul>
             <hr>
