@@ -15,10 +15,10 @@ Route::get('/', 'CardsController@index');
 Route::get('show/{card}', 'CardsController@show');
 Route::post('cards/{card}/notes', 'NotesController@store');
 Route::get('notes/{note}/edit', 'NotesController@edit');
-Route::get('cards/add/new', 'CardsController@store');
+Route::post('cards/add/new', 'CardsController@store');
 Route::get('cards/add', 'CardsController@create');
 Route::patch('notes/{note}', 'NotesController@update');
-Route::delete('delete/{note}', 'NotesController@delete');
+Route::get('delete/{note}', 'NotesController@delete');
 
 /*
 |--------------------------------------------------------------------------

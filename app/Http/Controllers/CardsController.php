@@ -22,8 +22,11 @@ class CardsController extends Controller
 
         return view('cards.show', compact('card'));
     }
-    public function store(){
-        DB::table('cards')->insert(['title' => 'Sixth Card']);
+    public function store(Request $request){
+        $card = new Card;
+        $card->title = $request->title;
+        $card->save();
+        return redirect('/');
     }
     public function create( Card $card){
         return view('cards.showCard', compact('card'));
