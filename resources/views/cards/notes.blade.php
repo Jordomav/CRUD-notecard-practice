@@ -4,6 +4,7 @@
 @endsection
 @section('content')
     <h1>This is the Notes page.</h1>
+    <hr>
     <ul>
         @foreach($notes as $note)
             <li>{{$note->id}}: {{$note->body}} <strong>Related Card:</strong> {{$note->card_id}}</li>

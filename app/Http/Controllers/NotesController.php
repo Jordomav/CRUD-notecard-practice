@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Note;
 use App\Card;
+use App;
+use DB;
 
 class NotesController extends Controller
 {
@@ -19,9 +21,8 @@ class NotesController extends Controller
     public function edit(Note $note){
         return view('notes.edit', compact('note'));
     }
-    public function update(Request $request, Note $note){
+    public function update(Request $request, Note $note, Card $card){
         $note->update($request->all());
-//        return view('cards.show');
         return back();
     }
     public function delete(Note $note){
