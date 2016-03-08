@@ -14,6 +14,9 @@
             <ul>
                 @foreach($cards as $card)
                     <li><a href="/show/{{$card->id}}">{{$card->title}}</a></li>
+                    <a href="/delete/card/{{$card->id}}">Delete Card</a><br>
+                    <a href="/edit/card/{{$card->id}}">Edit Card</a>
+                    <hr>
                 @endforeach
             </ul>
         </div>

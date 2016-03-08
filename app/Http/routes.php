@@ -19,6 +19,9 @@ Route::post('cards/add/new', 'CardsController@store');
 Route::get('cards/add', 'CardsController@create');
 Route::patch('notes/{note}', 'NotesController@update');
 Route::get('delete/{note}', 'NotesController@delete');
+Route::patch('edit/{card}', 'CardsController@edit');
+Route::get('edit/card/{card}', 'CardsController@update');
+Route::get('delete/card/{card}', 'CardsController@delete');
 
 /*
 |--------------------------------------------------------------------------
