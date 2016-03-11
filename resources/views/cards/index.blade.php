@@ -7,13 +7,13 @@
         <div class="col-md-6 col-md-offset-3">
             <h1 class="jumbotron">This is the Cards page.</h1>
             <hr>
-            <a href="/cards/add">Add a new card.</a>
+            <h3><a href="/cards/add">Add a new card.</a></h3>
             <hr>
             <h2>Checkout my Notes!</h2>
             <hr>
             <ul>
                 @foreach($cards as $card)
-                    <li><a href="/show/{{$card->id}}">{{$card->title}}</a></li>
+                    <li><h4><a href="/show/{{$card->id}}">{{$card->title}}</a></h4></li>
                     <a href="/delete/card/{{$card->id}}">Delete Card</a><br>
                     <a href="/edit/card/{{$card->id}}">Edit Card</a>
                     <hr>

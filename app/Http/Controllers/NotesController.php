@@ -10,6 +10,7 @@ use App\Card;
 use App;
 use DB;
 
+
 class NotesController extends Controller
 {
     public function store(Request $request, Card $card){
